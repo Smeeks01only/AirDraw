@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirDraw</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>AirDraw</h1>
+  <p id="status">Starting camera...</p>
+
+  <div class="stage">
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="drawing"></canvas>
+    <canvas id="overlay"></canvas>
+  </div>
+
+  <div class="toolbar">
+    <div id="swatches">
+      <button class="swatch active" data-color="#ffe14d" style="background:#ffe14d"></button>
+      <button class="swatch" data-color="#ff3b6b" style="background:#ff3b6b"></button>
+      <button class="swatch" data-color="#3dff7a" style="background:#3dff7a"></button>
+      <button class="swatch" data-color="#3bb0ff" style="background:#3bb0ff"></button>
+      <button class="swatch" data-color="#ffffff" style="background:#ffffff"></button>
+    </div>
+
+    <label>
+      Size
+      <input type="range" id="sizeSlider" min="2" max="24" value="6" />
+    </label>
+
+    <button id="saveBtn">Save PNG</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
